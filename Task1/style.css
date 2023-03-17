@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family:  'Press Start 2P', cursive;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.calci {
+    height: 120vh;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+}
+
+.calci h1 {
+    text-align: center;
+    font-family:  'Press Start 2P', cursive;
+    letter-spacing: 2px;
+    font-size: 50px;
+    margin: 0;
+    color: rgba(244, 35, 108, 0.84);
+    text-decoration-line:none;
+}
+
+.calculator-grid {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(14, 241, 18);
+    border: 1px solid rgb(171, 184, 217);
+    border-radius: 25px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    width: 70vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border-style: none;
+    outline: none;
+    background-color: rgb(225, 46, 88);
+    transition: all .45s;
+    margin: 5px;
+    border-radius: 45px;
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(241, 0, 84, 0.84);
+    color: rgba(44, 253, 205, 0.84);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+#equal {
+    background: rgb(184, 9, 232);
+}
+
+#equal:hover {
+    background-color: rgba(44, 253, 159, 0.84);
+    color: #fff;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(164, 31, 4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 25px;
+}
+
+.output .previous-operand {
+    color: rgb(9, 20, 232);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2rem;
+}
